@@ -1,22 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using ControlPanel.appData;
 using ControlPanel.appData.Table;
+using System.Security.Cryptography;
 
 namespace ControlPanel.Models
 {
     class LoginModel
     {
-
+        
         UsersDataBase db = new UsersDataBase();
 
         //sprawdzenie czy dany login istnieje.
         public bool loginExist(string login)
         {
             var user = db.User.Where(u => u.login == login);
+            if (user.Any())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool checkPassword(string password)
+        {
+            var user = db.User.Where(u => u.password == password);
             if (user.Any())
             {
                 return true;

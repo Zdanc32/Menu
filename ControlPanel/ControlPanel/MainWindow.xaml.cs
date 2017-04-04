@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ControlPanel.Models;
+using System.Security.Cryptography;
 
 namespace ControlPanel
 {
@@ -21,11 +22,15 @@ namespace ControlPanel
     /// </summary>
     public partial class MainWindow : Window
     {
+        MD5 md5hash = null;
+        RegisterModel md5Function = null;
         LoginModel model = null;
         ValidationModel validModel = null;
         public MainWindow()
         {
             InitializeComponent();
+            this.md5hash = MD5.Create();
+            this.md5Function = new RegisterModel();
             this.model = new LoginModel();
             this.validModel = new ValidationModel();
         }
@@ -41,9 +46,9 @@ namespace ControlPanel
         {
             try
             {
-                if (validModel.checkLogin(loginBox.Text) && validModel.checkPassword(passwordBox.Password.ToString()))
+                if (validModel.checkLogin(loginBox.Text) && validModel.checkPassword(passwordBox.Password.ToString())) 
                 {
-                    if (model.loginExist(loginBox.Text))
+                    if (model.loginExist(loginBox.Text) && model.checkPassword(md5Function.GetMd5Hash(md5hash, passwordBox.Password.ToString())))
                     {
                         loggedWindow loggedWin = new loggedWindow(model.getID(loginBox.Text));
                         loggedWin.Show();
