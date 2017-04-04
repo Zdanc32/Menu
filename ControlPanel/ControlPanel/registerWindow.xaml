@@ -1,0 +1,28 @@
+﻿<Window x:Class="ControlPanel.registerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControlPanel"
+        mc:Ignorable="d"
+        Title="Rejestracja konta" Height="862.5" Width="935.5">
+    <Grid Background="#FFA63838" Margin="0,0,0,0">
+        <TextBox x:Name="loginBox" HorizontalAlignment="Center" Height="28" Margin="346,143,342,660" TextWrapping="Wrap" VerticalAlignment="Center" Width="240" FontSize="16"/>
+        <Label x:Name="loginLabel" Content="Podaj swój login:" HorizontalAlignment="Center" Margin="346,111,342,688" VerticalAlignment="Center" RenderTransformOrigin="0.883,0.258" Foreground="White" Height="32" Width="240" FontSize="16"/>
+        <TextBox x:Name="emailBox" HorizontalAlignment="Center" Height="28" Margin="344,203,344,600" TextWrapping="Wrap" VerticalAlignment="Center" Width="240" FontSize="16"/>
+        <Label x:Name="emailLabel" Content="Podaj e-mail" HorizontalAlignment="Center" Margin="346,171,452,628" VerticalAlignment="Center" RenderTransformOrigin="0.883,0.258" Foreground="White" Height="32" Width="130" FontSize="16"/>
+        <Button x:Name="createButton" Content="Zarejestruj się" HorizontalAlignment="Center" Margin="346,555,342,239" VerticalAlignment="Center" Width="240" Height="37" FontSize="16" Click="createButton_Click"/>
+        <TextBox x:Name="nameBox" HorizontalAlignment="Center" Height="28" Margin="346,263,342,540" TextWrapping="Wrap" VerticalAlignment="Center" Width="240" FontSize="16"/>
+        <Label x:Name="nameLabel" Content="Podaj imię:" HorizontalAlignment="Center" Margin="346,231,342,568" VerticalAlignment="Center" RenderTransformOrigin="0.883,0.258" Foreground="White" Height="32" Width="240" FontSize="16"/>
+        <TextBox x:Name="surnameBox" HorizontalAlignment="Center" Height="28" Margin="346,323,342,480" TextWrapping="Wrap" VerticalAlignment="Center" Width="240" FontSize="16"/>
+        <Label x:Name="surnameLabel" Content="Podaj nazwisko:" HorizontalAlignment="Center" Margin="346,291,344,508" VerticalAlignment="Center" RenderTransformOrigin="0.883,0.258" Foreground="White" Height="32" Width="238" FontSize="16"/>
+        <TextBox x:Name="phoneBox" HorizontalAlignment="Center" Height="28" Margin="346,383,342,420" TextWrapping="Wrap" VerticalAlignment="Center" Width="240" FontSize="16"/>
+        <Label x:Name="phoneLabel" Content="Podaj numer telefonu:" HorizontalAlignment="Center" Margin="346,351,342,448" VerticalAlignment="Center" RenderTransformOrigin="0.883,0.258" Foreground="White" Height="32" Width="240" FontSize="16"/>
+        <Label x:Name="passwordLabel" Content="Wybierz hasło:" HorizontalAlignment="Center" Margin="346,411,344,388" VerticalAlignment="Center" RenderTransformOrigin="0.883,0.258" Foreground="White" Height="32" Width="238" FontSize="16"/>
+        <Label x:Name="passwordRepeatLabel" Content="Powtórz wybrane hasło:" HorizontalAlignment="Center" Margin="346,471,342,328" VerticalAlignment="Center" RenderTransformOrigin="0.883,0.258" Foreground="White" Height="32" Width="240" FontSize="16"/>
+        <Button x:Name="retrunButton" Content="Powrót do logowania" HorizontalAlignment="Center" Margin="346,613,342,184" VerticalAlignment="Center" Width="240" Height="34" FontSize="16" Click="retrunButton_Click"/>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Center" Margin="346,442,342,360" VerticalAlignment="Center" Width="240" FontSize="16" Height="29"/>
+        <PasswordBox x:Name="passwordBox_repeated" HorizontalAlignment="Center" Margin="346,503,342,299" VerticalAlignment="Center" Width="240" FontSize="16" Height="29"/>
+
+    </Grid>
+</Window>
