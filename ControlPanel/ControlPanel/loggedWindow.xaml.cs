@@ -31,11 +31,11 @@ namespace ControlPanel
             this.model = new LoginModel();
             this.id = id;
             this.user = model.getUser(id);
-            loginLabel.Content = "Witaj, " + user.login;
-            nameLabel.Content = "Imię: \t\t\t" + user.name;
-            surnameLabel.Content = "Nazwisko: \t\t" + user.surname;
-            phoneNumberLabel.Content = "Numer telefonu: \t\t" + user.phoneNumber;
-            emailLabel.Content = "E-mail: \t\t\t" + user.email;
+            loginLabel.Content = "Witaj, " + user.Login;
+            nameLabel.Content = "Imię: \t\t\t" + user.Name;
+            surnameLabel.Content = "Nazwisko: \t\t" + user.Surname;
+            phoneNumberLabel.Content = "Numer telefonu: \t\t" + user.PhoneNumber;
+            emailLabel.Content = "E-mail: \t\t\t" + user.Email;
             
         }
 

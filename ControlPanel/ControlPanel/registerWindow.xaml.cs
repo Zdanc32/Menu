@@ -49,12 +49,12 @@ namespace ControlPanel
                         this.Close();
                         User user = new User()
                         {
-                            login = loginBox.Text,
-                            email = emailBox.Text,
-                            name = nameBox.Text,
-                            surname = surnameBox.Text,
-                            phoneNumber = phoneBox.Text,
-                            password = model.GetMd5Hash(md5Hash, passwordBox.Password.ToString())
+                            Login = loginBox.Text,
+                            Email = emailBox.Text,
+                            Name = nameBox.Text,
+                            Surname = surnameBox.Text,
+                            PhoneNumber = phoneBox.Text,
+                            Password = model.GetMd5Hash(md5Hash, passwordBox.Password.ToString())
                         };
                         db.User.Add(user);
                         await db.SaveChangesAsync();

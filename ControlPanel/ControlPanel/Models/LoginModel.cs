@@ -13,7 +13,7 @@ namespace ControlPanel.Models
         //sprawdzenie czy dany login istnieje.
         public bool loginExist(string login)
         {
-            var user = db.User.Where(u => u.login == login);
+            var user = db.User.Where(u => u.Login == login);
             if (user.Any())
             {
                 return true;
@@ -26,7 +26,7 @@ namespace ControlPanel.Models
 
         public bool checkPassword(string password)
         {
-            var user = db.User.Where(u => u.password == password);
+            var user = db.User.Where(u => u.Password == password);
             if (user.Any())
             {
                 return true;
@@ -40,7 +40,7 @@ namespace ControlPanel.Models
         //pobranie ID użytkownika z bazy danych wykorzystujac login
         public int getID(string login)
         {
-            return db.User.Where(u => u.login == login).FirstOrDefault().id;
+            return db.User.Where(u => u.Login == login).FirstOrDefault().Id;
         }
 
         //pobranie wybranego po ID użytkownika z bazy

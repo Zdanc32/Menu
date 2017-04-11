@@ -13,7 +13,7 @@ namespace ControlPanel.Models
         //sprawdzenie czy dany email istnieje
         public bool emailExist(string email)
         {
-            var user = db.User.Where(u => u.email == email);
+            var user = db.User.Where(u => u.Email == email);
             if (user.Any())
             {
                 throw new Exception("podany adres e-mail jest juz zajęty!");
@@ -27,7 +27,7 @@ namespace ControlPanel.Models
         //sprawdzenie czy dany login istnieje.
         public bool loginExist(string login)
         {
-            var user = db.User.Where(u => u.login == login);
+            var user = db.User.Where(u => u.Login == login);
             if (user.Any())
             {
                 throw new Exception("podany login jest juz zajęty!");
